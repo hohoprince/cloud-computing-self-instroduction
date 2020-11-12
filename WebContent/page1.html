@@ -1,9 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1">
+        <title>나의 소개</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
     </head>
     <body>
-        <h1>page1</h1>
+        <style type="text/css">
+            .jumbotron {
+                background-image: url('images/background.jpg');
+                background-size: cover;
+                color: white;
+            }
+        </style>
+        <br><br><br>
+
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="index.html">소개합니다</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="#">나의 소개<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">한 줄 일기</a>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="jumbotron jumbotron-fluid">
+                <h1 class="text-center">안녕하세요!</h1><hr>
+                <h3 class="text-center">최성훈입니다</h2>
+            </div>
+        </div>
     </body>
 </html>
