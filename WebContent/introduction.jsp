@@ -21,13 +21,14 @@
 
 				<%@ include file="header.jsp" %>
 				<%@ include file="menu.jsp" %>
+				<%! String bucketName = "2016156039-1"; %>
 
 				<!-- Banner -->
 				<!-- Note: The "styleN" class below should match that of the header element. -->
 					<section id="banner" class="style2">
 						<div class="inner">
 							<span class="image">
-								<img src="images/pic07.jpg" alt="" />
+								<img src="https://<%=bucketName %>.s3.us-east-2.amazonaws.com/images/pic07.jpg" alt="" />
 							</span>
 							<header class="major">
 								<h1>나의 소개</h1>
@@ -56,7 +57,7 @@
 							<section id="two" class="spotlights">
 								<section>
 									<a href="##" class="image">
-										<img src="images/ansan.jpg" alt="" data-position="center center" />
+										<img src="https://<%=bucketName %>.s3.us-east-2.amazonaws.com/images/ansan.jpg" alt="" data-position="center center" />
 									</a>
 									<div class="content">
 										<div class="inner">
@@ -71,7 +72,7 @@
 								</section>
 								<section>
 									<a href="##" class="image">
-										<img src="images/bike.jpg" alt="" data-position="top center" />
+										<img src="https://<%=bucketName %>.s3.us-east-2.amazonaws.com/images/bike.jpg" alt="" data-position="top center" />
 									</a>
 									<div class="content">
 										<div class="inner">
@@ -86,7 +87,7 @@
 								</section>
 								<section>
 									<a href="##" class="image">
-										<img src="images/dangdang.jpg" alt="" data-position="25% 25%" />
+										<img src="https://<%=bucketName %>.s3.us-east-2.amazonaws.com/images/dangdang.jpg" alt="" data-position="25% 25%" />
 									</a>
 									<div class="content">
 										<div class="inner">

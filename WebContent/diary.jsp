@@ -56,10 +56,9 @@
 					</header>
 					<table border="1">
 						<tr>
-							<th>번호</th>
-							<th>내용</th>
-							<th>날짜</th>
-							<th>조회수</th>
+							<th width="10%">번호</th>
+							<th width="60%">내용</th>
+							<th width="30%">날짜</th>
 						</tr>
 						<%
 							for (int i = 0; i < diaries.size(); i++) {
@@ -68,7 +67,6 @@
 								<td><%=diaries.get(i).getId() %></td>
 								<td><%=diaries.get(i).getContent() %></td>
 								<td><%=diaries.get(i).getDate() %></td>
-								<td><%=diaries.get(i).getContent() %></td>
 							</tr>
 						<%									
 							}

@@ -1,7 +1,8 @@
 package dao;
-import java.io.Serializable;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -9,13 +10,14 @@ import java.util.ArrayList;
 
 
 
-public class DiaryDAO implements Serializable {
+public class DiaryDAO {
 	
 	String url = "jdbc:mysql://db2016156039.cubk3d96lbxk.us-east-2.rds.amazonaws.com:3306/test?serverTimezone=UTC";
 	String user = "admin";
 	String password = "admin123";
 	private Connection conn;
 	private Statement stmt;
+	private PreparedStatement pstmt;
 	
 	public DiaryDAO() {}
 	
@@ -39,9 +41,9 @@ public class DiaryDAO implements Serializable {
 			 
 			 while (rs.next()) {
 				 Diary diary = new Diary();
+				 diary.setId(rs.getInt("id"));
 				 diary.setContent(rs.getString("content"));
 				 diary.setDate(rs.getString("date"));
-				 diary.setCount(rs.getInt("count"));
 				 diaries.add(diary);
 			 }
 			stmt.close();
@@ -63,14 +65,11 @@ public class DiaryDAO implements Serializable {
 		
 		try {
 			conn = DriverManager.getConnection(url, user, password);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		Statement stmt;
-		try {
-			stmt = conn.createStatement();
-			int rs1 = stmt.executeUpdate("insert into diary values('1', 'ȫ�浿', '1234')");
-			stmt.close();
+			pstmt = conn.prepareStatement("insert into diary (content, date) values(?, ?)");
+			pstmt.setString(1, diary.getContent());
+			pstmt.setString(2, diary.getDate());
+			pstmt.executeUpdate();
+			pstmt.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

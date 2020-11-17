@@ -21,6 +21,8 @@
 
 				<%@ include file="header.jsp" %>
 				<%@ include file="menu.jsp" %>
+				
+				<%! String bucketName = "2016156039-1"; %>
 
 				<!-- Banner -->
 					<section id="banner" class="major">
@@ -44,7 +46,7 @@
 							<section id="one" class="tiles">
 								<article>
 									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
+										<img src="https://<%=bucketName %>.s3.us-east-2.amazonaws.com/images/pic01.jpg" alt="" />
 									</span>
 									<header class="major">
 										<h3><a href="introduction.jsp" class="link">나의 소개</a></h3>
@@ -53,7 +55,7 @@
 								</article>
 								<article>
 									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
+										<img src="https://<%=bucketName %>.s3.us-east-2.amazonaws.com/images/pic02.jpg" alt="" />
 									</span>
 									<header class="major">
 										<h3><a href="diary.jsp" class="link">한 줄 일기</a></h3>
@@ -62,38 +64,11 @@
 								</article>
 								<article>
 									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
+										<img src="https://<%=bucketName %>.s3.us-east-2.amazonaws.com/images/pic03.jpg" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="landing.html" class="link">Magna</a></h3>
-										<p>Lorem etiam nullam</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Ipsum</a></h3>
-										<p>Nisl sed aliquam</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Consequat</a></h3>
-										<p>Ipsum dolor sit amet</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="landing.html" class="link">Etiam</a></h3>
-										<p>Feugiat amet tempus</p>
+										<h3><a href="s3.jsp" class="link">S3</a></h3>
+										<p>S3 파일 목록</p>
 									</header>
 								</article>
 							</section>

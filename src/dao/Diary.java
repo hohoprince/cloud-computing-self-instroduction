@@ -4,7 +4,6 @@ public class Diary {
 	private int id;
 	private String content;
 	private String date;
-	private int count;
 	
 	public int getId() {
 		return id;
@@ -23,12 +22,6 @@ public class Diary {
 	}
 	public void setDate(String date) {
 		this.date = date;
-	}
-	public int getCount() {
-		return count;
-	}
-	public void setCount(int count) {
-		this.count = count;
 	}
 	
 }
